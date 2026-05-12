@@ -1,1 +1,23 @@
-{"scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0"},"dependencies":{"vite":"latest","react":"latest","react-dom":"latest","framer-motion":"latest","lucide-react":"latest"},"devDependencies":{"tailwindcss":"^3.4.17","postcss":"latest","autoprefixer":"latest"},"engines":{"node":">=20"}}
+{
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "framer-motion": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
