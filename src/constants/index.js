@@ -8,7 +8,7 @@ import didiFoodLogo from '../img/didi-food-logo.png';
 import uberEatsLogo from '../img/uber-eats-logo.png';
 import rappiLogo from '../img/rappi-logo.png';
 import gelatoFront from '../img/gelato-front.png';
-
+import mercsoftLogo from '../img/mercsoft.png';
 
 export const WA = 'https://wa.me/522211873410?text=Hola%20Cuore%20Italiano%2C%20quiero%20hacer%20un%20pedido%20directo';
 export const MAPS = 'https://www.google.com.mx/maps/search/Av.+6+Ote.+6,+Centro,+Cholula,+Puebla';
@@ -21,6 +21,7 @@ export const IMG = {
   drink: drink,
   event: eventsImg,
   gelatoFront: gelatoFront,
+  mercsoft: mercsoftLogo,
 };
 
 

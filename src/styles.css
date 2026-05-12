@@ -157,6 +157,22 @@ a {
   border-color: var(--violet);
 }
 
+.menu-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+@media(min-width: 860px) {
+  .menu-tabs {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -706,7 +722,7 @@ h3 {
 .footer {
   background: #130816;
   color: white;
-  padding: 80px 0 100px;
+  padding: 80px 0 20px;
 }
 
 .footGrid {
@@ -780,7 +796,7 @@ h3 {
 
 .mercsoft-logo {
   width: 100%;
-  max-width: 124px;
+  max-width: 95px;
   height: auto !important;
   display: block;
 }
@@ -872,7 +888,7 @@ h3 {
     align-items: center;
     gap: 30px;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
     padding: 40px;
     z-index: 90;
   }

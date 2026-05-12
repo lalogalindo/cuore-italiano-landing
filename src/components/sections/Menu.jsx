@@ -28,7 +28,7 @@ export default function Menu() {
 
         <Reveal style={{ width: '100%', maxWidth: '800px' }}>
           {/* Tabs */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap', marginBottom: '40px' }}>
+          <div className="menu-tabs">
             {tabs.map((tab) => (
               <button
                 key={tab.id}

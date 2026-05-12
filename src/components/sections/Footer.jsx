@@ -1,5 +1,5 @@
 import React from 'react';
-import { MAPS, WA } from '../../constants';
+import { MAPS, WA, IMG } from '../../constants';
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="powered">
             <span>Powered by</span>
             <a href="https://mercsoft.mx" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/mercsoft-logo.svg" alt="Mercsoft" className="mercsoft-logo" />
+              <img src={IMG.mercsoft} alt="Mercsoft" className="mercsoft-logo" />
             </a>
           </div>
         </div>
