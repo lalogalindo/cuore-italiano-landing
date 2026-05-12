@@ -5,8 +5,8 @@ import { IMG } from '../../constants';
 export default function Story() {
   return (
     <section id="historia" className="section bg-main">
-      <div className="shell" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Reveal style={{ textAlign: 'center', maxWidth: '800px', marginBottom: '60px' }}>
+      <div className="shell split">
+        <Reveal style={{ textAlign: 'left' }}>
           <span className="kicker">Nuestra Historia</span>
           <h2>Un sueño italiano que encontró casa en Puebla.</h2>
           <div style={{ margin: '40px 0' }}>
@@ -31,10 +31,19 @@ export default function Story() {
           </div>
         </Reveal>
 
-        <Reveal className="mosaic" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', width: '100%' }}>
-          <img className="img" src={IMG.scoop} alt="Gelato artesanal" style={{ height: '300px' }} />
-          <img className="img" src={IMG.cone} alt="Cono de gelato" style={{ height: '300px' }} />
-          <img className="img" src={IMG.cup} alt="Taza de gelato" style={{ height: '300px' }} />
+        <Reveal>
+          <div className="heroCard" style={{ minHeight: '500px' }}>
+            <img 
+              className="img" 
+              src={IMG.gelatoFront} 
+              alt="Gelato Cuore Italiano" 
+              style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '12px' }}
+            />
+            <div className="floatCard">
+              <i className="fa-solid fa-heart"></i>
+              <span>Artesanal & Natural</span>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
