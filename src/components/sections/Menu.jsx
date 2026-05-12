@@ -36,7 +36,8 @@ export default function Menu() {
                 className={`btn ${activeTab === tab.id ? 'btn1' : 'btn2'}`}
                 style={{ borderRadius: '30px', padding: '12px 24px' }}
               >
-                <i className={`fa-solid ${tab.icon}`}></i> {tab.label}
+                <i className={`fa-solid ${tab.icon}`}></i> 
+                <span className="hide-mobile-text">{tab.label}</span>
               </button>
             ))}
           </div>

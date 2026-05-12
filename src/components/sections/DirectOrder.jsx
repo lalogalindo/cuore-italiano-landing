@@ -1,6 +1,7 @@
 import React from 'react';
 import Reveal from '../ui/Reveal';
 import Button from '../ui/Button';
+import { WA } from '../../constants';
 
 export default function DirectOrder() {
   return (
@@ -17,13 +18,13 @@ export default function DirectOrder() {
           </p>
           <ul>
             <li>
-              <i className="fa-solid fa-chevron-right"></i> Atención directa
+              <i className="fa-solid fa-headset"></i> Atención directa
             </li>
             <li>
-              <i className="fa-solid fa-chevron-right"></i> Medios litros preparados a temperatura ideal
+              <i className="fa-solid fa-temperature-low"></i> Medios litros preparados a temperatura ideal
             </li>
             <li>
-              <i className="fa-solid fa-chevron-right"></i> Gelato, bebidas y postres sujetos a disponibilidad
+              <i className="fa-solid fa-clipboard-list"></i> Gelato, bebidas y postres sujetos a disponibilidad
             </li>
           </ul>
         </Reveal>
@@ -33,7 +34,7 @@ export default function DirectOrder() {
           </div>
           <h3>¿Antojo ahora?</h3>
           <p>Abre WhatsApp y pide tu momento mágico.</p>
-          <Button>
+          <Button href={WA}>
             <i className="fa-solid fa-phone"></i> Pedir por WhatsApp
           </Button>
         </Reveal>

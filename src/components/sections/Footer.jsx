@@ -30,6 +30,18 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <div className="footerBottom">
+        <div className="shell">
+          <p className="copyright">© {new Date().getFullYear()} Cuore Italiano. Todos los derechos reservados.</p>
+          <div className="powered">
+            <span>Powered by</span>
+            <a href="https://mercsoft.mx" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/mercsoft-logo.svg" alt="Mercsoft" className="mercsoft-logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+
       <a className="mobileWa" href={WA}>
         <i className="fa-brands fa-whatsapp"></i> Ordenar directo
       </a>

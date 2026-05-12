@@ -45,16 +45,16 @@ const MagneticPhoto = ({ photo, onClick }) => {
     <motion.div
       ref={ref}
       className="polaroid"
-      drag
+      drag={window.innerWidth > 860}
       dragConstraints={{ top: -50, left: -50, right: 900, bottom: 900 }}
       dragElastic={0.2}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      onMouseMove={window.innerWidth > 860 ? handleMouseMove : undefined}
+      onMouseLeave={window.innerWidth > 860 ? handleMouseLeave : undefined}
       whileHover={{ scale: 1.2, zIndex: 50 }}
       whileDrag={{ scale: 1.3, zIndex: 60, boxShadow: '0 30px 60px rgba(0,0,0,0.5)' }}
       onClick={onClick}
       style={{
-        width: 160, 
+        width: window.innerWidth > 860 ? 160 : 120, 
         left: photo.initialPos.left,
         top: photo.initialPos.top,
         rotate: photo.initialPos.rotate,
@@ -75,12 +75,15 @@ export default function Showcase() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
-    // Array de 40 números al azar del 1 al 1000
-    const randomIds = Array.from({ length: 40 }, () => Math.floor(Math.random() * 1000) + 1);
+    const isMobile = window.innerWidth <= 860;
+    const photoCount = isMobile ? 12 : 30;
+    
+    // Array de números al azar del 1 al 1000
+    const randomIds = Array.from({ length: photoCount }, () => Math.floor(Math.random() * 1000) + 1);
 
     const newPhotos = randomIds.map((id, i) => {
-      const left = Math.floor(Math.random() * 85);
-      const top = Math.floor(Math.random() * 80);
+      const left = Math.floor(Math.random() * (isMobile ? 70 : 85));
+      const top = Math.floor(Math.random() * (isMobile ? 70 : 80));
       const rotate = Math.floor(Math.random() * 80) - 40;
       const phrase = phrases[Math.floor(Math.random() * phrases.length)];
 
